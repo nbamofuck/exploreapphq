@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Explore Atlas – AI-assisted routes, offline-friendly and multi-map launch (Google, Apple, Waze). Public Beta in the Dominican Republic." />
-  <meta name="theme-color" content="#ff7a33" />
-  <title>Explore Atlas – Smarter Routes, Real Adventures</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Explore Atlas – AI-assisted routes, offline-friendly and multi-map launch (Google, Apple, Waze). Public Beta in the Dominican Republic." />
+    <meta name="theme-color" content="#ff7a33" />
+    <title>Explore Atlas – Smarter Routes, Real Adventures</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome (Brands) para íconos monocromos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
-  <link rel="stylesheet" href="assets/css/animated.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+
+    <!-- Social buttons (monocromos, no cambian tu paleta) -->
+    <style>
+        .social-links{display:flex; gap:.5rem; flex-wrap:wrap}
+        .social-btn{
+          display:inline-flex; align-items:center; justify-content:center;
+          width:44px; height:44px; border-radius:9999px;
+          border:1px solid rgba(0,0,0,.08);
+          background:#fff; color:#111; /* neutro; no altera tu paleta */
+          box-shadow:0 4px 12px rgba(0,0,0,.08);
+          transition:transform .15s ease, box-shadow .15s ease;
+        }
+        .social-btn:hover{ transform:translateY(-2px); box-shadow:0 8px 18px rgba(0,0,0,.12) }
+        .social-btn i{ font-size:18px; line-height:1 }
+    </style>
 </head>
 
 <body>
 
 <!-- ***** Preloader ***** -->
 <div id="js-preloader" class="js-preloader">
-  <div class="preloader-inner">
-    <span class="dot"></span>
-    <div class="dots"><span></span><span></span><span></span></div>
-  </div>
+    <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots"><span></span><span></span><span></span></div>
+    </div>
 </div>
 
 <!-- ***** Header ***** -->
 <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-  <div class="container">
-    <nav class="main-nav">
-      <a href="#top" class="logo"><img src="assets/images/icon-192.png" alt="Explore Logo"> <h4>Explore</h4></a>
+    <div class="container">
+        <nav class="main-nav">
+            <a href="#top" class="logo"><img src="assets/images/icon-192.png" alt="Explore Logo"> <h4>Explore</h4></a>
 
-      <a class='menu-trigger'><span>Menu</span></a>
-    </nav>
-  </div>
+            <a class='menu-trigger'><span>Menu</span></a>
+        </nav>
+    </div>
 </header>
 
 <!-- ***** Hero ***** -->
@@ -71,138 +89,140 @@
 
 <!-- ***** Features ***** -->
 <div id="features" class="our-services section">
-  <div class="container">
-    <div class="section-heading text-center mb-5">
-      <h2>What you Get with <span>Explore</span></h2>
+    <div class="container">
+        <div class="section-heading text-center mb-5">
+            <h2>What you Get with <span>Explore</span></h2>
+        </div>
+
+        <div class="features-grid">
+            <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
+                <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
+                <h4>AI Routes</h4>
+                <p>Itinerarios personalizados según distancia, clima y presupuesto.</p>
+            </div>
+
+            <div class="service-item wow fadeInUp" data-wow-delay="0.3s">
+                <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
+                <h4>Offline Friendly</h4>
+                <p>Caché inteligente para seguir explorando incluso con poca señal.</p>
+            </div>
+
+            <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
+                <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
+                <h4>Open in Any Maps</h4>
+                <p>Lanza la ruta directamente en Google Maps, Apple Maps o Waze.</p>
+            </div>
+
+            <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
+                <div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div>
+                <h4>Privacy First</h4>
+                <p>Diseñado con mínima recolección de datos y transparencia total.</p>
+            </div>
+
+            <div class="service-item wow fadeInUp" data-wow-delay="0.6s">
+                <div class="icon"><img src="assets/images/service-icon-05.png" alt=""></div>
+                <h4>Collections</h4>
+                <p>Guarda tus lugares en colecciones y compártelas con tus amigos.</p>
+            </div>
+
+            <div class="service-item wow fadeInUp" data-wow-delay="0.7s">
+                <div class="icon"><img src="assets/images/service-icon-06.png" alt=""></div>
+                <h4>Cost Control</h4>
+                <p>Optimización de APIs de Google y Firestore para rendimiento y bajo costo.</p>
+            </div>
+        </div>
     </div>
-
-    <div class="features-grid">
-      <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
-        <div class="icon"><img src="assets/images/service-icon-01.png" alt=""></div>
-        <h4>AI Routes</h4>
-        <p>Itinerarios personalizados según distancia, clima y presupuesto.</p>
-      </div>
-
-      <div class="service-item wow fadeInUp" data-wow-delay="0.3s">
-        <div class="icon"><img src="assets/images/service-icon-02.png" alt=""></div>
-        <h4>Offline Friendly</h4>
-        <p>Caché inteligente para seguir explorando incluso con poca señal.</p>
-      </div>
-
-      <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
-        <div class="icon"><img src="assets/images/service-icon-03.png" alt=""></div>
-        <h4>Open in Any Maps</h4>
-        <p>Lanza la ruta directamente en Google Maps, Apple Maps o Waze.</p>
-      </div>
-
-      <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
-        <div class="icon"><img src="assets/images/service-icon-04.png" alt=""></div>
-        <h4>Privacy First</h4>
-        <p>Diseñado con mínima recolección de datos y transparencia total.</p>
-      </div>
-
-      <div class="service-item wow fadeInUp" data-wow-delay="0.6s">
-        <div class="icon"><img src="assets/images/service-icon-05.png" alt=""></div>
-        <h4>Collections</h4>
-        <p>Guarda tus lugares en colecciones y compártelas con tus amigos.</p>
-      </div>
-
-      <div class="service-item wow fadeInUp" data-wow-delay="0.7s">
-        <div class="icon"><img src="assets/images/service-icon-06.png" alt=""></div>
-        <h4>Cost Control</h4>
-        <p>Optimización de APIs de Google y Firestore para rendimiento y bajo costo.</p>
-      </div>
-    </div>
-  </div>
 </div>
 
 <!-- ***** Screens / Portfolio ***** -->
 <div id="screens" class="our-portfolio section">
-  <div class="container">
-    <div class="section-heading">
-      <h2>App <em>Screens</em> & <span>Preview</span></h2>
+    <div class="container">
+        <div class="section-heading">
+            <h2>App <em>Screens</em> & <span>Preview</span></h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="item wow bounceInUp"><img src="assets/images/portfolio-image.png" alt="Screen 1"></div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="item wow bounceInUp"><img src="assets/images/portfolio-image.png" alt="Screen 2"></div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="item wow bounceInUp"><img src="assets/images/portfolio-image.png" alt="Screen 3"></div>
+            </div>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="item wow bounceInUp"><img src="assets/images/portfolio-image.png" alt="Screen 1"></div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="item wow bounceInUp"><img src="assets/images/portfolio-image.png" alt="Screen 2"></div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="item wow bounceInUp"><img src="assets/images/portfolio-image.png" alt="Screen 3"></div>
-      </div>
-    </div>
-  </div>
 </div>
 
 <!-- ***** Pricing ***** -->
 <div id="pricing" class="section our-services">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Simple <em>Plans</em> for <span>Everyone</span></h2>
-    </div>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="pricing-item card wow fadeInLeft" data-wow-delay="0.3s">
-          <h4>Free</h4>
-          <ul>
-            <li>AI Routes (Fair Use)</li>
-            <li>Open in Maps</li>
-            <li>Save Favorites</li>
-          </ul>
-
+    <div class="container">
+        <div class="section-heading">
+            <h2>Simple <em>Plans</em> for <span>Everyone</span></h2>
         </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="pricing-item card wow fadeInRight" data-wow-delay="0.3s">
-          <h4>Pro (Coming)</h4>
-          <ul>
-            <li>Unlimited Routes</li>
-            <li>Smart Offline Cache</li>
-            <li>Advanced Filters</li>
-          </ul>
-          <div class="main-red-button"><a href="#contact">Get Notified</a></div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="pricing-item card wow fadeInLeft" data-wow-delay="0.3s">
+                    <h4>Free</h4>
+                    <ul>
+                        <li>AI Routes (Fair Use)</li>
+                        <li>Open in Maps</li>
+                        <li>Save Favorites</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="pricing-item card wow fadeInRight" data-wow-delay="0.3s">
+                    <h4>Pro (Coming)</h4>
+                    <ul>
+                        <li>Unlimited Routes</li>
+                        <li>Smart Offline Cache</li>
+                        <li>Advanced Filters</li>
+                    </ul>
+                    <div class="main-red-button"><a href="#contact">Get Notified</a></div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
-<!-- ***** About ***** -->
-
-  <div id="contact" class="contact-us section">
+<!-- ***** About / Contact (con redes) ***** -->
+<div id="contact" class="contact-us section">
     <div class="container">
-      <div class="section-heading">
-        <h2>About <em>Explore Atlas LLC</em></h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <p><strong>Legal Entity:</strong> Explore Atlas LLC</p>
-          <p><strong>D-U-N-S:</strong> 119546449</p>
-          <p><strong>Address:</strong> 4200 Hillcrest Dr, Apt 815, Hollywood, FL 33021, United States</p>
-          <p><strong>Email:</strong> <a href="mailto:josvierrod@exploreapphq.com">josvierrod@exploreapphq.com</a></p>
-          <p><strong>Phone:</strong> +1 829 659 2975</p>
+        <div class="section-heading">
+            <h2>About <em>Explore Atlas LLC</em></h2>
         </div>
-        <div class="col-lg-6">
-          <div class="container">
-            <p>© <span id="year"></span> Explore Atlas LLC • All rights reserved. </p>
-          </div>
-        </div>
-      </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <p><strong>Legal Entity:</strong> Explore Atlas LLC</p>
+                <p><strong>D-U-N-S:</strong> 119546449</p>
+                <p><strong>Address:</strong> 4200 Hillcrest Dr, Apt 815, Hollywood, FL 33021, United States</p>
+                <p><strong>Email:</strong> <a href="mailto:josvierrod@exploreapphq.com">josvierrod@exploreapphq.com</a></p>
+                <p><strong>Phone:</strong> +1 829 659 2975</p>
+            </div>
 
+            <!-- Social buttons (monocromos) + copyright -->
+            <div class="col-lg-6 d-flex flex-column align-items-lg-end align-items-start">
+                <div class="social-links mb-3">
+                    <a class="social-btn" href="https://instagram.com/exploreatlasapp" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        <span class="visually-hidden">Instagram</span>
+                    </a>
+                    <a class="social-btn" href="https://www.tiktok.com/@exploreatlasapp" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                        <span class="visually-hidden">TikTok</span>
+                    </a>
+                </div>
+                <p class="mb-0 small">© <span id="year"></span> Explore Atlas LLC • All rights reserved.</p>
+            </div>
+        </div>
     </div>
-
-  </div>
-
-<!-- ***** Contact ***** -->
-
+</div>
 
 <!-- ***** Footer ***** -->
 
-
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
