@@ -141,20 +141,20 @@
             </div>
         </div>
 
-        <!-- Carrusel múltiple -->
-        <div id="appScreensCarousel" class="carousel slide wow fadeInUp" data-bs-ride="carousel" data-bs-interval="4000" data-wow-delay="0.4s">
+        <!-- Carrusel TRIPLE solo para PC (md y arriba) -->
+        <div id="appScreensCarouselDesktop" class="carousel slide d-none d-md-block wow fadeInUp" data-bs-ride="carousel" data-bs-interval="4000" data-wow-delay="0.4s">
             <div class="carousel-inner">
-                <!-- Slide 1 -->
+                <!-- Slide 1 - Tres imágenes -->
                 <div class="carousel-item active">
-                    <div class="d-flex justify-content-center gap-4 flex-wrap">
+                    <div class="d-flex justify-content-center gap-4">
                         <img src="assets/images/P2.png" class="phone-img" alt="App Screen 1">
                         <img src="assets/images/P3.png" class="phone-img" alt="App Screen 2">
                         <img src="assets/images/P4.png" class="phone-img" alt="App Screen 3">
                     </div>
                 </div>
-                <!-- Slide 2 -->
+                <!-- Slide 2 - Tres imágenes -->
                 <div class="carousel-item">
-                    <div class="d-flex justify-content-center gap-4 flex-wrap">
+                    <div class="d-flex justify-content-center gap-4">
                         <img src="assets/images/P5.png" class="phone-img" alt="App Screen 4">
                         <img src="assets/images/P6.png" class="phone-img" alt="App Screen 5">
                         <img src="assets/images/P7.png" class="phone-img" alt="App Screen 6">
@@ -162,27 +162,71 @@
                 </div>
             </div>
 
-            <!-- Controles -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#appScreensCarousel" data-bs-slide="prev">
+            <!-- Controles Desktop -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#appScreensCarouselDesktop" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#appScreensCarousel" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#appScreensCarouselDesktop" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
             </button>
 
-            <!-- Indicadores -->
+            <!-- Indicadores Desktop -->
             <div class="carousel-indicators mt-3">
-                <button type="button" data-bs-target="#appScreensCarousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#appScreensCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#appScreensCarouselDesktop" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#appScreensCarouselDesktop" data-bs-slide-to="1"></button>
+            </div>
+        </div>
+
+        <!-- Carrusel SIMPLE solo para Móvil (sm y abajo) -->
+        <div id="appScreensCarouselMobile" class="carousel slide d-block d-md-none wow fadeInUp" data-bs-ride="carousel" data-bs-interval="3000" data-wow-delay="0.4s">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/P2.png" class="phone-img-mobile" alt="App Screen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/P3.png" class="phone-img-mobile" alt="App Screen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/P4.png" class="phone-img-mobile" alt="App Screen 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/P5.png" class="phone-img-mobile" alt="App Screen 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/P6.png" class="phone-img-mobile" alt="App Screen 5">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/P7.png" class="phone-img-mobile" alt="App Screen 6">
+                </div>
+            </div>
+
+            <!-- Controles Mobile -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#appScreensCarouselMobile" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#appScreensCarouselMobile" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+
+            <!-- Indicadores Mobile -->
+            <div class="carousel-indicators mt-3">
+                <button type="button" data-bs-target="#appScreensCarouselMobile" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#appScreensCarouselMobile" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#appScreensCarouselMobile" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#appScreensCarouselMobile" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#appScreensCarouselMobile" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#appScreensCarouselMobile" data-bs-slide-to="5"></button>
             </div>
         </div>
     </div>
 </div>
 
 <!-- ***** Pricing (Actualizado a 3 tarjetas) ***** -->
-<!-- ***** Pricing (Landing Version – sin botones ni “Current Plan”) ***** -->
+<!-- ***** Pricing (Landing Version – sin botones ni "Current Plan") ***** -->
 <section id="pricing" class="pricing section">
     <div class="container">
         <div class="section-heading text-center">
@@ -285,7 +329,6 @@
         </div>
     </div>
 </section>
-
 
 <!-- ***** About / Contact ***** -->
 <div id="contact" class="contact-us section">
