@@ -3585,12 +3585,12 @@ section {
 /* === Ajuste del bloque About (sin padding inferior) === */
 #contact.contact-us {
   padding-top: 160px;
-  padding-bottom: 80px; /* elimina el padding de abajo */
-  margin-bottom: 0; /* asegura que no haya doble espacio */
+  padding-bottom: 80px;
+  margin-bottom: 0;
 }
 
 #contact.contact-us .container:last-of-type {
-  margin-top: 40px; /* mantiene separación con el copyright */
+  margin-top: 40px;
 }
 /* Versión responsive: reduce el espacio en pantallas pequeñas */
 @media (max-width: 768px) {
