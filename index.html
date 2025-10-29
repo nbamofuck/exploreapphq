@@ -22,6 +22,23 @@
     <link rel="stylesheet" href="assets/css/animated.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
     <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+
+    <!-- ⛑️ Overrides críticos para garantizar clics (puedes mover a tu CSS luego) -->
+    <style>
+        /* Deja pasar clics en decoraciones del banner */
+        .main-banner::before, .main-banner::after { pointer-events: none !important; }
+        /* Sube el contenido del banner por encima del fondo */
+        .main-banner .container { position: relative; z-index: 5 !important; }
+        /* Asegura que la zona de botones esté por encima y reciba clics */
+        .store-buttons { position: relative; z-index: 10 !important; pointer-events: auto !important; }
+        .store-buttons a { display: inline-block; line-height: 0; pointer-events: auto !important; }
+        .store-buttons img.store-badge { height: 55px; pointer-events: auto !important; cursor: pointer; }
+        @media (max-width: 768px) { .store-buttons img.store-badge { height: 40px; } }
+        /* Evita que sombras pseudo tapen clics en otros bloques comunes del template */
+        .item::before { pointer-events: none !important; }
+        /* Por si el preloader quedó invisible pero encima */
+        #js-preloader { pointer-events: none !important; }
+    </style>
 </head>
 
 <body>
@@ -58,12 +75,21 @@
                         navegación con tu app favorita: Google Maps, Apple Maps o Waze.
                     </p>
 
+                    <!-- ✅ Botones de App Store y Google Play -->
                     <div class="store-buttons mt-4">
-                        <a href="https://play.google.com/store/apps/details?id=com.exploreatlas.app" target="_blank" class="me-2">
-                            <img src="assets/images/googleplay-badge.svg" alt="Get it on Google Play" style="height:55px;">
+                        <a id="googleplay-link"
+                           href="https://play.google.com/store/apps/details?id=com.explore.miapp&hl=es"
+                           target="_blank" rel="noopener noreferrer" class="me-2" aria-label="Get it on Google Play">
+                            <!-- La imagen puede venir del backend; lo importante es mantener el <a> y esta clase -->
+                            <img id="googleplay-badge" class="store-badge"
+                                 src="assets/images/googleplay-badge.svg" alt="Get it on Google Play">
                         </a>
-                        <a href="https://apps.apple.com/app/id1234567890" target="_blank">
-                            <img src="assets/images/appstore-badge.svg" alt="Download on the App Store" style="height:55px;">
+
+                        <a id="appstore-link"
+                           href="https://apps.apple.com/do/app/explore-tourism/id6748882805?l=en-GB"
+                           target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+                            <img id="appstore-badge" class="store-badge"
+                                 src="assets/images/appstore-badge.svg" alt="Download on the App Store">
                         </a>
                     </div>
                 </div>
@@ -361,8 +387,77 @@
 
 <!-- ***** Scripts ***** -->
 <script>
+    // Año dinámico
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    //  Enlazado robusto + desbloqueo de overlays
+    (function () {
+      const PLAY_URL  = "https://play.google.com/store/apps/details?id=com.explore.miapp&hl=es";
+      const APPLE_URL = "https://apps.apple.com/do/app/explore-tourism/id6748882805?l=en-GB";
+
+      function wireAnchor(id, url) {
+        const a = document.getElementById(id);
+        if (!a) return;
+        a.href = url;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.style.pointerEvents = "auto";
+
+        // Evita que otros scripts bloqueen el click
+        a.addEventListener('click', (e) => {
+          // no cancelamos el default del <a>, solo evitamos propagación
+          e.stopPropagation();
+        }, true);
+
+        const img = a.querySelector('img');
+        if (img) {
+          img.style.cursor = 'pointer';
+          img.addEventListener('click', (e) => {
+            // si por alguna razón el <a> no navega, forzamos
+            if (!a.href) window.open(url, "_blank", "noopener");
+            e.stopPropagation();
+          }, true);
+        }
+      }
+
+      // Quita cualquier overlay del preloader si quedó encima
+      const preloader = document.getElementById('js-preloader');
+      if (preloader) {
+        preloader.style.pointerEvents = 'none';
+        // Si por algún motivo sigue mostrándose, lo ocultamos al rato
+        setTimeout(() => { preloader.style.display = 'none'; }, 2000);
+      }
+
+      // Vincula los botones
+      wireAnchor('googleplay-link', PLAY_URL);
+      wireAnchor('appstore-link', APPLE_URL);
+
+      // 🛡️ Desbloqueo automático: si hay algo por encima, desactiva pointer-events en ese elemento
+      function unblockAbove(el) {
+        if (!el) return;
+        const r = el.getBoundingClientRect();
+        const testPoints = [
+          [r.left + r.width * 0.25, r.top + r.height / 2],
+          [r.left + r.width * 0.75, r.top + r.height / 2]
+        ];
+        testPoints.forEach(([x, y]) => {
+          const top = document.elementFromPoint(x, y);
+          if (top && !el.contains(top)) {
+            // Solo desactivamos pointer-events del elemento que tapa
+            top.style.pointerEvents = 'none';
+          }
+        });
+      }
+
+      const stores = document.querySelector('.store-buttons');
+      unblockAbove(stores);
+
+      // Por si frameworks reinyectan overlays luego de animaciones
+      setTimeout(() => unblockAbove(stores), 800);
+      window.addEventListener('resize', () => unblockAbove(stores));
+    })();
 </script>
+
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/owl-carousel.js"></script>
