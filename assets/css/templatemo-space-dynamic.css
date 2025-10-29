@@ -4709,3 +4709,19 @@ Features - MEJORAS MODERNAS
   .plan-card{padding:22px}
   .plan-price-big{font-size:1.7rem}
 }
+.header-area .main-nav .logo,
+.header-area .main-nav .logo h4,
+.background-header .main-nav .logo,
+.background-header .main-nav .logo h4 {
+  color: #fff !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+.background-header .logo h4 span {
+  color: #fff !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #fff !important;
+}
